@@ -1,0 +1,422 @@
+TITLE=
+Network 1 
+LD     M5.2
+MOVW   VW12, VW40
+MOVD   &VB372, VD428
+AENO
+MOVD   &VB376, VD416
+Network 2 
+LD     M5.3
+MOVW   VW14, VW40
+MOVD   &VB380, VD428
+AENO
+MOVD   &VB384, VD416
+Network 3 
+LD     M5.4
+MOVW   VW16, VW40
+MOVD   &VB512, VD428
+AENO
+MOVD   &VB516, VD416
+Network 4 
+LD     M8.6
+MOVW   VW18, VW40
+MOVD   &VB520, VD428
+AENO
+MOVD   &VB524, VD416
+Network 5 
+LD     M3.4
+ED
+LD     M5.6
+O      M5.7
+ALD
+LD     M5.6
+EU
+LD     M5.7
+EU
+OLD
+LD     M5.5
+EU
+OLD
+CTU    C2, VW40
+Network 6 
+LD     M5.5
+EU
+S      M5.6, 1
+Network 7 
+LD     M5.6
+EU
+LD     M5.7
+EU
+OLD
+S      M1.7, 1
+Network 8 
+LD     M1.7
+A      C2
+LD     M5.7
+O      M5.6
+ALD
+R      M1.7, 1
+Network 9 
+LD     M5.5
+A      C2
+LPS
+A      M5.7
+R      M1.7, 1
+S      M5.0, 1
+LPP
+A      M5.6
+R      M5.6, 1
+S      M5.7, 1
+Network 10 
+LDN    M5.5
+A      C2
+LD     M5.6
+O      M5.7
+ALD
+S      M5.0, 1
+Network 11 
+LD     M20.0
+O      M20.1
+O      M20.2
+O      M20.3
+O      M20.4
+O      M20.5
+R      M5.1, 1
+Network 12 
+LD     M3.4
+ED
+A      M1.7
+A      M5.1
+R      M1.7, 1
+Network 13 
+LD     M3.4
+ED
+LD     M5.6
+O      M5.7
+O      M5.5
+ALD
+AN     C2
+S      M2.0, 1
+Network 14 
+LD     M7.2
+ED
+A      M15.3
+A      M9.6
+S      M1.7, 1
+Network 15 
+LD     M1.7
+EU
+S      M2.0, 1
+Network 16 
+// 2026.07.24-----新修改，排空置位后紧跟日志上传出发位置位
+LD     M2.0
+EU
+S      M19.6, 1
+Network 17 
+// 排空后执行样品润洗
+LDN    M2.0
+EU
+A      M1.7
+S      M2.1, 1
+Network 18 
+LD     M9.3
+O      M9.4
+O      M9.7
+O      M10.2
+EU
+S      M1.7, 1
+Network 19 
+LD     M1.7
+R      M8.5, 1
+Network 20 
+// // 在抽完试剂A后添加抽下液位纯水
+LD     M1.7
+LPS
+A      M2.1
+ED
+S      M2.2, 1
+LRD
+A      M2.2
+ED
+S      M18.0, 1
+LRD
+A      M18.0
+ED
+S      M2.3, 1
+LRD
+A      M2.3
+ED
+S      M2.4, 1
+LRD
+A      M2.4
+ED
+S      M2.5, 1
+LRD
+A      M2.5
+ED
+S      M21.0, 1
+LRD
+A      M21.0
+ED
+S      M2.6, 1
+LRD
+A      M2.6
+ED
+S      M21.1, 1
+LRD
+A      M21.1
+ED
+S      M21.4, 1
+LRD
+A      M21.4
+ED
+S      M2.7, 1
+LRD
+A      M2.7
+ED
+S      M21.2, 1
+LRD
+A      M21.2
+ED
+S      M3.0, 1
+LRD
+A      M3.0
+ED
+S      M3.1, 1
+LRD
+A      M3.1
+ED
+S      M3.2, 1
+LRD
+A      M3.2
+ED
+S      M21.3, 1
+LRD
+A      M21.3
+ED
+S      M3.3, 1
+LRD
+A      M3.3
+ED
+S      M3.4, 1
+LPP
+A      M3.4
+ED
+AN     M5.1
+AN     M5.5
+AN     M5.6
+AN     M5.7
+R      M1.7, 1
+S      M8.5, 1
+S      M7.2, 1
+S      M7.5, 1
+R      M9.3, 2
+R      M9.7, 1
+R      M10.2, 2
+R      M11.0, 2
+R      M19.3, 1
+R      M15.2, 2
+R      M16.2, 1
+R      M12.0, 1
+R      M15.5, 1
+Network 21 
+LD     M21.0
+O      M21.1
+O      M21.2
+O      M21.3
+LPS
+TON    T128, 100
+A      T128
+A      M21.0
+R      M21.0, 1
+LRD
+A      T128
+A      M21.1
+R      M21.1, 1
+LRD
+A      T128
+A      M21.2
+R      M21.2, 1
+LPP
+A      T128
+A      M21.3
+R      M21.3, 1
+Network 22 
+LD     M2.2
+O      M2.6
+O      M3.0
+O      M2.5
+O      M2.7
+O      M2.3
+O      M3.2
+O      M3.3
+O      M8.5
+EU
+S      M19.6, 1
+Network 23 
+LD     M5.0
+EU
+LPS
+AN     M5.1
+CALL   SBR14
+LRD
+A      M5.1
+CALL   SBR12
+LPP
+A      M5.1
+CALL   SBR30
+Network 24 
+LD     M5.0
+TON    T62, +30
+A      T62
+R      M5.0, 1
+Network 25 
+LD     M5.0
+ED
+R      M5.5, 3
+R      M5.1, 1
+Network 26 
+LD     M5.0
+AW>=   T62, +15
+EU
+LPS
+A      M5.2
+MOVR   VD444, VD452
+AENO
+MOVR   VD448, VD456
+AENO
+MOVR   VD476, VD480
+LRD
+A      M5.3
+MOVR   VD444, VD460
+AENO
+MOVR   VD448, VD464
+AENO
+MOVR   VD476, VD484
+LRD
+A      M5.4
+MOVR   VD444, VD468
+AENO
+MOVR   VD448, VD472
+AENO
+MOVR   VD476, VD488
+LPP
+A      M8.6
+MOVR   VD444, VD496
+AENO
+MOVR   VD448, VD500
+AENO
+MOVR   VD476, VD504
+Network 27 
+LD     SM0.0
+LPS
+A      M5.2
+MOVR   VD452, VD74
+AENO
+MOVR   VD456, VD70
+AENO
+MOVR   VD480, VD492
+LRD
+A      M5.3
+MOVR   VD460, VD74
+AENO
+MOVR   VD464, VD70
+AENO
+MOVR   VD484, VD492
+LRD
+A      M5.4
+MOVR   VD468, VD74
+AENO
+MOVR   VD472, VD70
+AENO
+MOVR   VD488, VD492
+LPP
+A      M8.6
+MOVR   VD496, VD74
+AENO
+MOVR   VD500, VD70
+AENO
+MOVR   VD504, VD492
+Network 28 
+LD     M7.3
+EU
+LPS
+A      M5.2
+BMD    VD11100, VD100, 6
+AENO
+BMD    VD11100, VD140, 6
+AENO
+MOVW   +1, VW12
+LRD
+A      M5.3
+BMD    VD11100, VD2100, 6
+AENO
+BMD    VD11100, VD2140, 6
+AENO
+MOVW   +1, VW14
+LRD
+A      M5.4
+BMD    VD11100, VD2200, 6
+AENO
+BMD    VD11100, VD2240, 6
+AENO
+MOVW   +1, VW16
+LPP
+A      M8.6
+BMD    VD11100, VD2300, 6
+AENO
+BMD    VD11100, VD2340, 6
+AENO
+MOVW   +1, VW18
+Network 29 
+LD     M7.4
+EU
+LPS
+A      M5.2
+LPS
+BMD    VD11100, VD240, 6
+AENO
+BMD    VD11100, VD200, 6
+LRD
+BMD    VD11100, VD452, 2
+AENO
+BMD    VD11100, VD480, 1
+LPP
+MOVW   +0, VW30
+LRD
+A      M5.3
+LPS
+BMD    VD11100, VD1240, 6
+AENO
+BMD    VD11100, VD1200, 6
+LRD
+BMD    VD11100, VD460, 2
+AENO
+BMD    VD11100, VD484, 1
+LPP
+MOVW   +0, VW32
+LRD
+A      M5.4
+LPS
+BMD    VD11100, VD1340, 6
+AENO
+BMD    VD11100, VD1300, 6
+LRD
+BMD    VD11100, VD468, 2
+AENO
+BMD    VD11100, VD488, 1
+LPP
+MOVW   +0, VW34
+LPP
+A      M8.6
+LPS
+BMD    VD11100, VD1440, 6
+AENO
+BMD    VD11100, VD1400, 6
+LRD
+BMD    VD11100, VD496, 2
+AENO
+BMD    VD11100, VD504, 1
+LPP
+MOVW   +0, VW36
+Network 30 
